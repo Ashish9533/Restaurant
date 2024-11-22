@@ -1,9 +1,20 @@
 const sidebar = document.getElementById('sidebar');
 const buttons = sidebar.querySelectorAll('button');
+const sidebarTexts = document.getElementsByClassName('sidebar-text');
+
 
 sidebar.addEventListener('mouseenter', () => {
+  console.log('mouseenter');
   sidebar.classList.add('w-64');
   sidebar.classList.remove('w-16');
+
+  console.log(sidebarTexts);
+  Array.from(sidebarTexts).forEach(sidebarText => {
+    console.log(sidebarText,'sidebarTesxt')
+    sidebarText.classList.remove('hidden');
+    
+  });
+
   buttons.forEach(button => {
     button.classList.add('justify-start');
     button.classList.add('space-x-4');
@@ -11,8 +22,16 @@ sidebar.addEventListener('mouseenter', () => {
 });
 
 sidebar.addEventListener('mouseleave', () => {
+ 
+
+  Array.from(sidebarTexts).forEach(sidebarText => {
+    console.log(sidebarText,'sidebarTesxt')
+    sidebarText.classList.add('hidden');
+   
+  });
   sidebar.classList.add('w-16');
   sidebar.classList.remove('w-64');
+
   buttons.forEach(button => {
     button.classList.remove('justify-start');
     button.classList.remove('space-x-4');

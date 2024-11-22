@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -10,13 +11,13 @@ class AuthController extends Controller
         return view("auth.login");
     }
 
-    function signup(){
-        return view("auth.signup");
-    }
+    // function signup(){
+    //     return view("auth.signup");
+    // }
 
-    function loginPost(){
-        return view('');
-    }
+    // function loginPost(){
+    //     return view('');
+    // }
 
     public function auth_login(Request $request) {
 
