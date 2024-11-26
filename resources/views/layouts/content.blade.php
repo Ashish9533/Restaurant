@@ -1,4 +1,4 @@
-<!-- Content Area with Scrolling -->
+<!-- Content Area -->
 <div class="flex-1 overflow-y-auto mt-12">
     <div class="mx-12 p-6  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <!-- Staff Overview -->
@@ -69,7 +69,7 @@
   
       <section class="p-6 bg-white shadow rounded-[2rem] my-4">
         <h2 class="text-xl font-bold mb-4">Clear Overview</h2>
-        <div class="bg-white rounded-lg shadow-lg p-6">
+        <div class="bg-white rounded-lg shadow-lg p-6 overflow-x-auto">
           <!-- Header Navigation -->
           <div class="flex items-center justify-between mb-6">
             <div class="flex">
@@ -154,7 +154,7 @@
           </div>
   
           <!-- Table -->
-          <table class="w-full">
+          <table class="w-full ">
             <thead>
               <tr class="border-b">
                 <th class="py-3 px-4 text-left">
@@ -347,3 +347,4 @@
   
     </div>
   </div>
+  

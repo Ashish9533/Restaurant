@@ -14,7 +14,10 @@
 @include('layouts.navbar') 
 @include('layouts.sidebar')
 
-@include('layouts.content')
+{{-- @include('layouts.content') --}}
+
+@include('user-access')
+@include('role-permission-popup')
 
 </div>
 </body>
