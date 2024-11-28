@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ config('app.name') }}</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    {{-- Datatable CSS --}}
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" />
 </head>
 <body class="bg-gray-200 overflow-hidden">
    
@@ -14,10 +17,10 @@
 @include('layouts.navbar') 
 @include('layouts.sidebar')
 
-{{-- @include('layouts.content') --}}
+@include('layouts.content')
 
-@include('user-access')
-@include('role-permission-popup')
+{{-- @include('user-access') --}}
+{{-- @include('role-permission-popup') --}}
 
 </div>
 </body>
