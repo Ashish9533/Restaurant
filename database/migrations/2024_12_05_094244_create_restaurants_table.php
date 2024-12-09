@@ -11,9 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('vendors', function (Blueprint $table) {
+        Schema::create('restaurants', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable();
+            $table->string('name');
+            $table->string('official_mail');
+            $table->string('official_phone');
+            $table->string('official_address');
             $table->string('business_name')->nullable();
             $table->string('account_holder_name')->nullable();
             $table->string('account_number')->nullable();
@@ -21,7 +24,6 @@ return new class extends Migration
             $table->string('ifsc_code')->nullable();
             $table->string('gstin')->nullable();
             $table->string('pan')->nullable();
-        
             $table->timestamps();
         });
     }
@@ -31,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('vendors');
+        Schema::dropIfExists('restaurants');
     }
 };
